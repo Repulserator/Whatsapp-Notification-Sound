@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<style>
+body {
+    font-family: system-ui;
+    padding: 12px;
+    width: 450px;
+    background: #0b0b0b;
+    color: #e8e8e8;
+}
+
+/* 🔥 Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ff7849;
+    text-shadow: 0 0 6px rgba(255, 120, 73, 0.4);
+}
+
+/* 🧱 Card container */
+#soundList {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 🔥 2 columns */
+    gap: 6px;
+    border: 1px solid #2a1a16;
+    border-radius: 10px;
+    padding: 8px;
+    background: #121212;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 5px 6px;
+    border-radius: 6px;
+    background: #151515;
+
+    font-size: 15px;
+}
+
+/* hover */
+.row:hover {
+    background: #1f1714;
+}
+
+/* checkbox accent */
+input[type="checkbox"] {
+    accent-color: #ff5a2f;
+    transform: scale(1.1);
+    margin-right: 8px;
+}
+
+/* text */
+.row span {
+    flex: 1;
+    color: #ddd;
+}
+
+/* 🔊 preview button */
+button {
+    background: #2a1a16;
+    color: #ff7849;
+    border: 1px solid #3a241d;
+    padding: 4px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button {
+    margin-left: auto;
+    padding: 3px 6px;
+    font-size: 12px;
+}
+
+button:hover {
+    background: #3a221b;
+    color: #ff9a6a;
+    box-shadow: 0 0 6px rgba(255, 100, 50, 0.4);
+}
+
+/* ✅ saved indicator */
+#status {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+    color: #5cff9c;
+    text-shadow: 0 0 6px rgba(92, 255, 156, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#status.show {
+    opacity: 1;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+    /* 🔥 tweak position here */
+    transform: translateY(0px);
+}
+
+.helper {
+    margin: 6px 0 8px;
+    font-size: 11px;
+    text-align: center;
+    color: #ff7849;
+    opacity: 0.7;
+}
+
+.logo-wide {
+    width: 100%;
+    max-width: 400px;  /* 🔥 MAIN SIZE CONTROL */
+    height: auto;
+    object-fit: contain;
+
+    /* 🔥 fine tuning */
+    transform: scale(1); /* zoom control */
+
+    /* optional smoothing */
+    image-rendering: auto;
+}
+
+body {
+    /*background: radial-gradient(circle at top, #0b0b0b, #050505);*/
+    background: #000000;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<div class="logo-container">
+  <img src="icons/logo-wide.png" class="logo-wide">
+</div>
+
+
+<!-- <h4>Select your sounds</h4> -->
+
+<div id="soundList"></div>
+
+<div class="helper">
+  Select one or many sounds
+</div>
+
+<div id="status">Saved ✓</div>
+
+<script src="popup.js"></script>
+
+</body>
+</html>
