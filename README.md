@@ -11,7 +11,10 @@ Supports:
 Uses unread message detection to trigger alerts, restoring a feature no longer available in WhatsApp Web.
 
 
+## Usage
 
+In Mozilla Firefox, simply visit this page and add a temporary add on/extension.
+about:debugging#/runtime/this-firefox
 
 
 
